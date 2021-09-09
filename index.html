@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Library</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>This is Pranav's Component Library</h1>
@@ -17,6 +18,7 @@
     <h1>This is the biggest heading</h1>
     <h2>This is the second biggest heading</h2>
     <p>Let me show u the normal text. This is free flowing and will wrap at the end like a paragraph.</p>
+    <p>This paragraph will have a <strong>bold</strong> text</p>
     <small>This is relatively smaller text.</small>
 
     <hr>
@@ -24,23 +26,24 @@
     <h2>@container</h2>
 
     <h3>fluid container</h3>
-    <div>This is a fluid container & it will go till the end of the page.</div>
+    <div class="container">This is a fluid container & it will go till the end of the page.</div>
 
     <h3>center container</h3>
-    <div>This is a centered container & it will go till the specified width.</div>
+    <div class="container container-center">This is a centered container & it will go till the specified width.</div>
 
     <hr>
 
     <h2>@links</h2>
-    <a href="/">Primary Link</a>
-    <a href="/">Secondary Link</a>
+    <a class="link link-primary" href="/">Primary Link</a>
+    <a class="link link-secondary" href="/">Secondary Link</a>
 
     <hr>
 
     <h2>@lists</h2>
     <h3>unordered lists</h3>
+    <p>This list will not have the bullet</p>
 
-    <ul>
+    <ul class="list-non-bullet">
         <li>Item One</li>
         <li>Item Two</li>
         <li>Item Three</li>
@@ -48,15 +51,15 @@
     
     <h3>unordered inline list</h3>
 
-    <ul>
-        <li>Inline Item One</li>
-        <li>Inline Item Two</li>
-        <li>Inline Item Three</li>
+    <ul class="list-non-bullet">
+        <li class="list-item-inline">Inline Item One</li>
+        <li class="list-item-inline">Inline Item Two</li>
+        <li class="list-item-inline">Inline Item Three</li>
     </ul>
 
     <h3>reverse ordered list</h3>
 
-    <ol>
+    <ol reversed>
         <li>Physics</li>
         <li>Chemistry</li>
         <li>Maths</li>
@@ -66,18 +69,18 @@
 
     <h2>@nav</h2>
 
-    <nav>
-        <div>BrandNameHere</div>
+    <nav class="navigation container">
+        <div class="nav-brand">BrandNameHere</div>
 
-        <ul>
-            <li>
-                <a href="/">Home</a>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link link-active" href="/">Home</a>
             </li>
-            <li>
-                <a href="/">Products</a>
+            <li class="list-item-inline">
+                <a class="link href="/">Products</a>
             </li>
-            <li>
-                <a href="/">About</a>
+            <li class="list-item-inline">
+                <a class="link href="/">About</a>
             </li>
         </ul>
 
@@ -87,35 +90,52 @@
 
     <h2>@header</h2>
 
-    <header>
-        <img src="/images/header.svg" />
-        <h1>Some heading inside header</h1>
+    <header class="hero">
+        <img class="hero-img" src="/images/header.svg" />
+        <h1 class="hero-heading">Pranav Tripathi the <span class="heading-inverted">web developer</span></h1>
     </header>
 
     <hr>
 
     <h2>@section</h2>
 
-    <section>
-        <h3>white section</h3>
-        <p>This will have white background</p>
+    <section class="section">
+        <div class="container container-center">
+            <h1>white section</h1>
+            <p>If you want to get in touch with us about anything, the best way is to drop us a message on our Discourse forum. We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns. If you're interested in helping develop/improve the content, take a look at how you can help and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.</p>
+        </div>
+        
     </section>
 
-    <section>
-        <h3>off white section</h3>
-        <p>This will have gray backgound</p>
+    <section class="section ow">
+        <div class="container container-center">
+            <h1>off white section</h1>
+            <p>If you want to get in touch with us about anything, the best way is to drop us a message on our Discourse forum. We'd like to hear from you about anything you think is wrong or missing on the site, requests for new learning topics, requests for help with items you don't understand, or any other questions or concerns. If you're interested in helping develop/improve the content, take a look at how you can help and get in touch! We are more than happy to talk to you, whether you are a learner, teacher, experienced web developer, or someone else interested in helping to improve the learning experience.</p>
+        </div>
     </section>
 
     <hr>
 
     <h2>@footer</h2>
 
-    <footer>
-        <div>Some small heading inside footer</div>
-        <ul>
-            <li>SocialLinkOne</li>
-            <li>SocialLinkTwo</li>
-            <li>SocialLinkThree</li>
+    <footer class="footer">
+        <div class="footer-header">Some small heading inside footer</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline">
+                <a class="link" href="/">
+                    SocialLinkOne
+                </a> 
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/">
+                    SocialLinkTwo
+                </a> 
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/">
+                    SocialLinkThree
+                </a> 
+            </li>
         </ul>
     </footer>
 
